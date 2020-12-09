@@ -1,0 +1,63 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css"/>
+        <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="http://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    </head>
+
+    <body>
+
+        <div class="container">  
+            <form id="contact" action="" method="">
+              <h3>Weather Data Viewer</h3>
+              <fieldset>
+                Start date:
+                <input name="startDate" type="month" id="startDate" onClick=""></input>
+                End date:
+                <input name="endDate" type="month" id="endDate" onClick=""></input>
+                Data:
+                <select name="dataType" id="dataType">
+                  <option value="solar">Solar Radiation</option>
+                  <option value="wind">Wind Speed</option>
+                  <option value="both">Both</option>
+                </select> <br>
+                Display Graph:
+                <input type="checkbox" id="disGraph" name="disGraph" checked>
+              </fieldset>
+              <fieldset>
+                <button name="submit" type="submit" id="submitData" data-submit="...Sending" onClick="">Submit</button>
+              </fieldset>
+              <table id="example" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Month</th>
+                        <th>Avg Solar Radiation</th>
+                        <th>Avg Wind Speed</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                      <th></th>
+                      <th>Month</th>
+                      <th>Avg Solar Radiation</th>
+                      <th>Avg Wind Speed</th>
+                    </tr>
+                </tfoot>
+            </table>
+
+             
+              <fieldset>
+              <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+            </fieldset>
+            </form>
+           
+          </div>
+          <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    </body>
+    <script src="indexPage.js" type="text/javascript"></script> 
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+</html>
